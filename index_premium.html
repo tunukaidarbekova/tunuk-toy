@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тунук | Кыз Узатуу</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Raleway,sans-serif;
+background:linear-gradient(180deg,#fafdff,#eef8ff,#dff2ff);
+color:#53687d;overflow-x:hidden;
+}
+.frame1,.frame2{position:fixed;pointer-events:none;z-index:99}
+.frame1{inset:16px;border:2px solid rgba(120,180,220,.35);border-radius:32px}
+.frame2{inset:32px;border:1px solid rgba(120,180,220,.25);border-radius:24px}
+
+.hero{
+min-height:100vh;
+display:flex;align-items:center;justify-content:center;
+padding:40px 20px;
+}
+.card{
+max-width:1000px;width:100%;
+background:rgba(255,255,255,.78);
+backdrop-filter:blur(18px);
+border-radius:40px;
+padding:60px 35px;
+text-align:center;
+box-shadow:0 20px 60px rgba(100,170,220,.18);
+}
+.kicker{letter-spacing:8px;color:#79add4}
+h1{
+font-family:'Playfair Display',serif;
+font-size:96px;
+color:#6797bf;
+margin:15px 0;
+}
+.desc{max-width:750px;margin:auto;line-height:2;font-size:20px}
+.info{margin:35px 0}
+.info div{margin:12px 0;font-size:22px}
+.btn{
+background:linear-gradient(135deg,#9fd5f8,#6eaed7);
+color:#fff;border:none;padding:16px 34px;
+border-radius:40px;cursor:pointer;font-size:16px
+}
+.timer{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:40px}
+.box{
+background:#fff;padding:18px;border-radius:22px;min-width:120px;
+box-shadow:0 8px 20px rgba(0,0,0,.08)
+}
+.box span{display:block;font-size:38px;font-weight:700;color:#6eaed7}
+
+.section{padding:80px 20px}
+.title{
+font-family:'Playfair Display',serif;
+font-size:44px;
+text-align:center;
+margin-bottom:35px;
+color:#6797bf;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px;
+max-width:1150px;
+margin:auto;
+}
+.gallery img{
+width:100%;height:430px;object-fit:cover;
+border-radius:24px;
+border:6px solid white;
+box-shadow:0 15px 35px rgba(100,170,220,.18);
+}
+
+.map-card{
+max-width:900px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(100,170,220,.12);
+text-align:center;
+}
+
+.rsvp{
+max-width:700px;margin:auto;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(100,170,220,.12);
+}
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #dbeaf6;
+border-radius:12px;
+}
+.footer{text-align:center;padding:80px 20px}
+.footer h3{
+font-family:'Playfair Display',serif;
+font-size:52px;color:#6797bf
+}
+
+.petals span{
+position:fixed;
+top:-50px;
+font-size:24px;
+animation:fall linear infinite;
+opacity:.7;
+}
+@keyframes fall{
+to{transform:translateY(110vh) rotate(360deg)}
+}
+</style>
+</head>
+<body>
+
+<div class="frame1"></div><div class="frame2"></div>
+
+<div class="petals">
+<span style="left:8%;animation-duration:14s">❄</span>
+<span style="left:22%;animation-duration:18s">❄</span>
+<span style="left:45%;animation-duration:12s">❄</span>
+<span style="left:67%;animation-duration:17s">❄</span>
+<span style="left:85%;animation-duration:15s">❄</span>
+</div>
+
+<section class="hero">
+<div class="card">
+<div class="kicker">КЫЗ УЗАТУУ</div>
+<h1>Тунук</h1>
+
+<div class="desc">
+Урматтуу туугандар жана достор!<br><br>
+Сиздерди кызыбыз Тунуктун кыз узатуу тоюна арналган салтанаттуу кечеге чакырабыз.
+Бул өзгөчө күнү биздин кубанычыбызды бөлүшүп, ак батаныздарды берип кетсеңиздер биз үчүн чоң сыймык болмок.
+</div>
+
+<div class="info">
+<div>📅 21 Август 2026</div>
+<div>🕕 18:00</div>
+<div>📍 Ансар Гранд Холл, Талас</div>
+</div>
+
+<button class="btn" onclick="document.getElementById('music').play()">🎵 Музыканы күйгүзүү</button>
+
+<div class="timer">
+<div class="box"><span id="d">0</span>Күн</div>
+<div class="box"><span id="h">0</span>Саат</div>
+<div class="box"><span id="m">0</span>Мүнөт</div>
+<div class="box"><span id="s">0</span>Секунд</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">Улуттук салттын көркү</div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80">
+</div>
+</section>
+
+<section class="section">
+<div class="title">Дарек</div>
+<div class="map-card">
+<h3>Ансар Гранд Холл</h3>
+<p>Талас шаары</p>
+<p style="margin-top:15px">Бул жерге Google Maps iframe кошо аласыз.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="title">Катышууну ырастоо</div>
+<div class="rsvp">
+<input placeholder="Атыңыз">
+<input placeholder="Телефон номериңиз">
+<button class="btn">Жөнөтүү</button>
+</div>
+</section>
+
+<section class="footer">
+<h3>Айдарбек жана Назира</h3>
+<p>Сиздерди терең урматтоо менен күтөбүз!</p>
+<p style="margin-top:15px;font-style:italic">«Кыз бала — үйдүн куту, элдин көркү»</p>
+</section>
+
+<audio id="music">
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const target=new Date('2026-08-21T18:00:00').getTime();
+setInterval(()=>{
+let d=target-Date.now();
+document.getElementById('d').textContent=Math.max(0,Math.floor(d/86400000));
+document.getElementById('h').textContent=Math.max(0,Math.floor(d%86400000/3600000));
+document.getElementById('m').textContent=Math.max(0,Math.floor(d%3600000/60000));
+document.getElementById('s').textContent=Math.max(0,Math.floor(d%60000/1000));
+},1000);
+</script>
+
+</body>
+</html>
